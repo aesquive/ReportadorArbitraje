@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 1/04/2010 01:02:47 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="baseMeta.objetos.Cal" table="CAL">
+    <id name="calId" type="big_decimal">
+      <column name="CAL_ID" precision="22" scale="0"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="calDes" type="string">
+      <column length="100" name="CAL_DES"/>
+    </property>
+    <set inverse="true" name="catPsis">
+      <key>
+        <column name="CAL_ID" precision="22" scale="0"/>
+      </key>
+      <one-to-many class="baseMeta.objetos.CatPsi"/>
+    </set>
+    <set inverse="true" name="apoOtrs">
+      <key>
+        <column name="CAL_ID" precision="22" scale="0"/>
+      </key>
+      <one-to-many class="baseMeta.objetos.ApoOtr"/>
+    </set>
+    <set inverse="true" name="gtoSlds">
+      <key>
+        <column name="CAL_ID" precision="22" scale="0"/>
+      </key>
+      <one-to-many class="baseMeta.objetos.GtoSld"/>
+    </set>
+    <set inverse="true" name="dinExts">
+      <key>
+        <column name="CAL_ID" precision="22" scale="0"/>
+      </key>
+      <one-to-many class="baseMeta.objetos.DinExt"/>
+    </set>
+    <set inverse="true" name="gtoRens">
+      <key>
+        <column name="CAL_ID" precision="22" scale="0"/>
+      </key>
+      <one-to-many class="baseMeta.objetos.GtoRen"/>
+    </set>
+    <set inverse="true" name="gtoVeses">
+      <key>
+        <column name="CAL_ID" precision="22" scale="0"/>
+      </key>
+      <one-to-many class="baseMeta.objetos.GtoVes"/>
+    </set>
+    <set inverse="true" name="apyEcos">
+      <key>
+        <column name="CAL_ID" precision="22" scale="0"/>
+      </key>
+      <one-to-many class="baseMeta.objetos.ApyEco"/>
+    </set>
+    <set inverse="true" name="opnBars">
+      <key>
+        <column name="CAL_ID" precision="22" scale="0"/>
+      </key>
+      <one-to-many class="baseMeta.objetos.OpnBar"/>
+    </set>
+    <set inverse="true" name="conFpfs">
+      <key>
+        <column name="CAL_ID" precision="22" scale="0"/>
+      </key>
+      <one-to-many class="baseMeta.objetos.ConFpf"/>
+    </set>
+    <set inverse="true" name="burAbts">
+      <key>
+        <column name="CAL_ID" precision="22" scale="0"/>
+      </key>
+      <one-to-many class="baseMeta.objetos.BurAbt"/>
+    </set>
+    <set inverse="true" name="conAbfs">
+      <key>
+        <column name="CAL_ID" precision="22" scale="0"/>
+      </key>
+      <one-to-many class="baseMeta.objetos.ConAbf"/>
+    </set>
+    <set inverse="true" name="gtoImps">
+      <key>
+        <column name="CAL_ID" precision="22" scale="0"/>
+      </key>
+      <one-to-many class="baseMeta.objetos.GtoImp"/>
+    </set>
+    <set inverse="true" name="gtoLims">
+      <key>
+        <column name="CAL_ID" precision="22" scale="0"/>
+      </key>
+      <one-to-many class="baseMeta.objetos.GtoLim"/>
+    </set>
+    <set inverse="true" name="opnBzns">
+      <key>
+        <column name="CAL_ID" precision="22" scale="0"/>
+      </key>
+      <one-to-many class="baseMeta.objetos.OpnBzn"/>
+    </set>
+    <set inverse="true" name="burActs">
+      <key>
+        <column name="CAL_ID" precision="22" scale="0"/>
+      </key>
+      <one-to-many class="baseMeta.objetos.BurAct"/>
+    </set>
+    <set inverse="true" name="opnFpFvs">
+      <key>
+        <column name="CAL_ID" precision="22" scale="0"/>
+      </key>
+      <one-to-many class="baseMeta.objetos.OpnFpFv"/>
+    </set>
+    <set inverse="true" name="creOtrs">
+      <key>
+        <column name="CAL_ID" precision="22" scale="0"/>
+      </key>
+      <one-to-many class="baseMeta.objetos.CreOtr"/>
+    </set>
+    <set inverse="true" name="conReds">
+      <key>
+        <column name="CAL_ID" precision="22" scale="0"/>
+      </key>
+      <one-to-many class="baseMeta.objetos.ConRed"/>
+    </set>
+    <set inverse="true" name="migs">
+      <key>
+        <column name="CAL_ID" precision="22" scale="0"/>
+      </key>
+      <one-to-many class="baseMeta.objetos.Mig"/>
+    </set>
+    <set inverse="true" name="conUces">
+      <key>
+        <column name="CAL_ID" precision="22" scale="0"/>
+      </key>
+      <one-to-many class="baseMeta.objetos.ConUce"/>
+    </set>
+    <set inverse="true" name="intPis">
+      <key>
+        <column name="CAL_ID" precision="22" scale="0"/>
+      </key>
+      <one-to-many class="baseMeta.objetos.IntPi"/>
+    </set>
+    <set inverse="true" name="ings">
+      <key>
+        <column name="CAL_ID" precision="22" scale="0"/>
+      </key>
+      <one-to-many class="baseMeta.objetos.Ing"/>
+    </set>
+    <set inverse="true" name="banPorPags">
+      <key>
+        <column name="CAL_ID" precision="22" scale="0"/>
+      </key>
+      <one-to-many class="baseMeta.objetos.BanPorPag"/>
+    </set>
+    <set inverse="true" name="depEcos">
+      <key>
+        <column name="CAL_ID" precision="22" scale="0"/>
+      </key>
+      <one-to-many class="baseMeta.objetos.DepEco"/>
+    </set>
+    <set inverse="true" name="gtoEdus">
+      <key>
+        <column name="CAL_ID" precision="22" scale="0"/>
+      </key>
+      <one-to-many class="baseMeta.objetos.GtoEdu"/>
+    </set>
+    <set inverse="true" name="edos">
+      <key>
+        <column name="CAL_ID" precision="22" scale="0"/>
+      </key>
+      <one-to-many class="baseMeta.objetos.Edo"/>
+    </set>
+    <set inverse="true" name="edoCvls">
+      <key>
+        <column name="CAL_ID" precision="22" scale="0"/>
+      </key>
+      <one-to-many class="baseMeta.objetos.EdoCvl"/>
+    </set>
+    <set inverse="true" name="conAmas">
+      <key>
+        <column name="CAL_ID" precision="22" scale="0"/>
+      </key>
+      <one-to-many class="baseMeta.objetos.ConAma"/>
+    </set>
+    <set inverse="true" name="cueAbrs">
+      <key>
+        <column name="CAL_ID" precision="22" scale="0"/>
+      </key>
+      <one-to-many class="baseMeta.objetos.CueAbr"/>
+    </set>
+    <set inverse="true" name="gtoDeus">
+      <key>
+        <column name="CAL_ID" precision="22" scale="0"/>
+      </key>
+      <one-to-many class="baseMeta.objetos.GtoDeu"/>
+    </set>
+    <set inverse="true" name="nivEsts">
+      <key>
+        <column name="CAL_ID" precision="22" scale="0"/>
+      </key>
+      <one-to-many class="baseMeta.objetos.NivEst"/>
+    </set>
+    <set inverse="true" name="apoHijs">
+      <key>
+        <column name="CAL_ID" precision="22" scale="0"/>
+      </key>
+      <one-to-many class="baseMeta.objetos.ApoHij"/>
+    </set>
+    <set inverse="true" name="gtoSabs">
+      <key>
+        <column name="CAL_ID" precision="22" scale="0"/>
+      </key>
+      <one-to-many class="baseMeta.objetos.GtoSab"/>
+    </set>
+    <set inverse="true" name="IRnts">
+      <key>
+        <column name="I_RNT_ID" not-null="true" precision="22" scale="0" unique="true"/>
+      </key>
+      <one-to-many class="baseMeta.objetos.IRnt"/>
+    </set>
+    <set inverse="true" name="gtoSerVivs">
+      <key>
+        <column name="CAL_ID" precision="22" scale="0"/>
+      </key>
+      <one-to-many class="baseMeta.objetos.GtoSerViv"/>
+    </set>
+    <set inverse="true" name="nivEstPaps">
+      <key>
+        <column name="CAL_ID" precision="22" scale="0"/>
+      </key>
+      <one-to-many class="baseMeta.objetos.NivEstPap"/>
+    </set>
+    <set inverse="true" name="movs">
+      <key>
+        <column name="CAL_ID" precision="22" scale="0"/>
+      </key>
+      <one-to-many class="baseMeta.objetos.Mov"/>
+    </set>
+    <set inverse="true" name="burAnts">
+      <key>
+        <column name="CAL_ID" precision="22" scale="0"/>
+      </key>
+      <one-to-many class="baseMeta.objetos.BurAnt"/>
+    </set>
+    <set inverse="true" name="conBars">
+      <key>
+        <column name="CAL_ID" precision="22" scale="0"/>
+      </key>
+      <one-to-many class="baseMeta.objetos.ConBar"/>
+    </set>
+    <set inverse="true" name="gtoCres">
+      <key>
+        <column name="CAL_ID" precision="22" scale="0"/>
+      </key>
+      <one-to-many class="baseMeta.objetos.GtoCre"/>
+    </set>
+    <set inverse="true" name="opnPrts">
+      <key>
+        <column name="CAL_ID" precision="22" scale="0"/>
+      </key>
+      <one-to-many class="baseMeta.objetos.OpnPrt"/>
+    </set>
+    <set inverse="true" name="nivEstMams">
+      <key>
+        <column name="CAL_ID" precision="22" scale="0"/>
+      </key>
+      <one-to-many class="baseMeta.objetos.NivEstMam"/>
+    </set>
+    <set inverse="true" name="freRels">
+      <key>
+        <column name="CAL_ID" precision="22" scale="0"/>
+      </key>
+      <one-to-many class="baseMeta.objetos.FreRel"/>
+    </set>
+    <set inverse="true" name="banPorUsos">
+      <key>
+        <column name="CAL_ID" precision="22" scale="0"/>
+      </key>
+      <one-to-many class="baseMeta.objetos.BanPorUso"/>
+    </set>
+    <set inverse="true" name="burUsos">
+      <key>
+        <column name="CAL_ID" precision="22" scale="0"/>
+      </key>
+      <one-to-many class="baseMeta.objetos.BurUso"/>
+    </set>
+    <set inverse="true" name="ocps">
+      <key>
+        <column name="CAL_ID" precision="22" scale="0"/>
+      </key>
+      <one-to-many class="baseMeta.objetos.Ocp"/>
+    </set>
+    <set inverse="true" name="banCmps">
+      <key>
+        <column name="CAL_ID" precision="22" scale="0"/>
+      </key>
+      <one-to-many class="baseMeta.objetos.BanCmp"/>
+    </set>
+    <set inverse="true" name="deses">
+      <key>
+        <column name="CAL_ID" precision="22" scale="0"/>
+      </key>
+      <one-to-many class="baseMeta.objetos.Des"/>
+    </set>
+    <set inverse="true" name="burPags">
+      <key>
+        <column name="CAL_ID" precision="22" scale="0"/>
+      </key>
+      <one-to-many class="baseMeta.objetos.BurPag"/>
+    </set>
+    <set inverse="true" name="ests">
+      <key>
+        <column name="CAL_ID" precision="22" scale="0"/>
+      </key>
+      <one-to-many class="baseMeta.objetos.Est"/>
+    </set>
+    <set inverse="true" name="gtoTrns">
+      <key>
+        <column name="CAL_ID" precision="22" scale="0"/>
+      </key>
+      <one-to-many class="baseMeta.objetos.GtoTrn"/>
+    </set>
+    <set inverse="true" name="actExts">
+      <key>
+        <column name="CAL_ID" precision="22" scale="0"/>
+      </key>
+      <one-to-many class="baseMeta.objetos.ActExt"/>
+    </set>
+    <set inverse="true" name="asoPars">
+      <key>
+        <column name="CAL_ID" precision="22" scale="0"/>
+      </key>
+      <one-to-many class="baseMeta.objetos.AsoPar"/>
+    </set>
+    <set inverse="true" name="edas">
+      <key>
+        <column name="CAL_ID" precision="22" scale="0"/>
+      </key>
+      <one-to-many class="baseMeta.objetos.Eda"/>
+    </set>
+    <set inverse="true" name="creHips">
+      <key>
+        <column name="CAL_ID" precision="22" scale="0"/>
+      </key>
+      <one-to-many class="baseMeta.objetos.CreHip"/>
+    </set>
+    <set inverse="true" name="gtoAlms">
+      <key>
+        <column name="CAL_ID" precision="22" scale="0"/>
+      </key>
+      <one-to-many class="baseMeta.objetos.GtoAlm"/>
+    </set>
+    <set inverse="true" name="clis">
+      <key>
+        <column name="CLI_ID" not-null="true" precision="22" scale="0" unique="true"/>
+      </key>
+      <one-to-many class="baseMeta.objetos.Cli"/>
+    </set>
+    <set inverse="true" name="gtoDivs">
+      <key>
+        <column name="CAL_ID" precision="22" scale="0"/>
+      </key>
+      <one-to-many class="baseMeta.objetos.GtoDiv"/>
+    </set>
+    <set inverse="true" name="opnAbfs">
+      <key>
+        <column name="CAL_ID" precision="22" scale="0"/>
+      </key>
+      <one-to-many class="baseMeta.objetos.OpnAbf"/>
+    </set>
+    <set inverse="true" name="mejPars">
+      <key>
+        <column name="CAL_ID" precision="22" scale="0"/>
+      </key>
+      <one-to-many class="baseMeta.objetos.MejPar"/>
+    </set>
+    <set inverse="true" name="gtoSots">
+      <key>
+        <column name="CAL_ID" precision="22" scale="0"/>
+      </key>
+      <one-to-many class="baseMeta.objetos.GtoSot"/>
+    </set>
+    <set inverse="true" name="IPsis">
+      <key>
+        <column name="CAL_ID" precision="22" scale="0"/>
+      </key>
+      <one-to-many class="baseMeta.objetos.IPsi"/>
+    </set>
+    <set inverse="true" name="actUlts">
+      <key>
+        <column name="CAL_ID" precision="22" scale="0"/>
+      </key>
+      <one-to-many class="baseMeta.objetos.ActUlt"/>
+    </set>
+    <set inverse="true" name="cliMtas">
+      <key>
+        <column name="CAL_ID" precision="22" scale="0"/>
+      </key>
+      <one-to-many class="baseMeta.objetos.CliMta"/>
+    </set>
+    <set inverse="true" name="numCres">
+      <key>
+        <column name="CAL_ID" precision="22" scale="0"/>
+      </key>
+      <one-to-many class="baseMeta.objetos.NumCre"/>
+    </set>
+    <set inverse="true" name="gtoPers">
+      <key>
+        <column name="CAL_ID" precision="22" scale="0"/>
+      </key>
+      <one-to-many class="baseMeta.objetos.GtoPer"/>
+    </set>
+    <set inverse="true" name="freDins">
+      <key>
+        <column name="CAL_ID" precision="22" scale="0"/>
+      </key>
+      <one-to-many class="baseMeta.objetos.FreDin"/>
+    </set>
+    <set inverse="true" name="gtoOtrs">
+      <key>
+        <column name="CAL_ID" precision="22" scale="0"/>
+      </key>
+      <one-to-many class="baseMeta.objetos.GtoOtr"/>
+    </set>
+    <set inverse="true" name="apoCons">
+      <key>
+        <column name="CAL_ID" precision="22" scale="0"/>
+      </key>
+      <one-to-many class="baseMeta.objetos.ApoCon"/>
+    </set>
+    <set inverse="true" name="apoPads">
+      <key>
+        <column name="CAL_ID" precision="22" scale="0"/>
+      </key>
+      <one-to-many class="baseMeta.objetos.ApoPad"/>
+    </set>
+    <set inverse="true" name="burHises">
+      <key>
+        <column name="CAL_ID" precision="22" scale="0"/>
+      </key>
+      <one-to-many class="baseMeta.objetos.BurHis"/>
+    </set>
+    <set inverse="true" name="opnMaps">
+      <key>
+        <column name="CAL_ID" precision="22" scale="0"/>
+      </key>
+      <one-to-many class="baseMeta.objetos.OpnMap"/>
+    </set>
+  </class>
+</hibernate-mapping>

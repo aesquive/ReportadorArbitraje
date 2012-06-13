@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+    <h:head>
+        <title>Reportador Arbitraje</title>
+    </h:head>
+    <h:body>
+        <h:dataTable value="#{reportadorBean.ligas}" var="vector">
+            <h:column>
+                <h:outputLink  value="http://50.112.124.249/#{vector.y}">
+                    <h:outputText value="#{vector.x}"/>
+                </h:outputLink>
+            </h:column>
+        </h:dataTable>
+    </h:body>
+</html>
+
